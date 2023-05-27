@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 function Count() {
     const [count, setCount] = useState(1);
@@ -10,7 +11,7 @@ function Count() {
     return (
         <div>
             <div>{count}</div>
-            <button onClick={addCount}>Add</button>
+            <button onClick={addCount}>Add count</button>
         </div>
     )
 }
@@ -18,6 +19,7 @@ function Count() {
 function Home() {
     return (
         <div>
+            <Link href="/about">About</Link>
             <h1>Test a count in React.js with Next.js</h1>
             <Count/>
         </div>
